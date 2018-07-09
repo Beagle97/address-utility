@@ -1,0 +1,61 @@
+p[INFO ] [Test worker] AlgorythmZipCodeTest - Test null value in upper bound expecting IllegalArgumentException
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+B[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to null
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+v[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting an empty range set into an empty range set successfully
+E[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before empty
+D[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after empty
+v[INFO ] [Test worker] AlgorythmZipCodeTest - Test invalid zip code in lower bound expecting IllegalArgumentException
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+B[INFO ] [Test worker] AlgorythmZipCodeTest -       0001 to 00005
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+w[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting ranges with null input expecting empty collection output
+D[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before null
+z[WARN ] [Test worker] AlgorythmZipCode - compactRanges called with null zip code range, returning empty range collection
+D[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after empty
+u[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting three out-of-order ranges into two ranges successfully
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00009 to 00011
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to 00005
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00003 to 00007
+>[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to 00007
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00009 to 00011
+f[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting two ranges into two ranges successfully
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to 00005
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+>[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to 00005
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+d[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting one range into one range successfully
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00010 to 00015
+>[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00010 to 00015
+	v[INFO ] [Test worker] AlgorythmZipCodeTest - Test invalid zip code in upper bound expecting IllegalArgumentException
+	?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+	C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to +0005
+	C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+
+p[INFO ] [Test worker] AlgorythmZipCodeTest - Test compacting three adjacent ranges into one range successfully
+
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00006 to 00008
+
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00009 to 00011
+
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00003 to 00006
+
+>[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges after
+
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00003 to 00011
+{[INFO ] [Test worker] AlgorythmZipCodeTest - Test lower bound greater than upper bound expecting IllegalArgumentException
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00003 to 00002
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00007 to 00009
+p[INFO ] [Test worker] AlgorythmZipCodeTest - Test null value in lower bound expecting IllegalArgumentException
+?[INFO ] [Test worker] AlgorythmZipCodeTest -    ranges before
+C[INFO ] [Test worker] AlgorythmZipCodeTest -       00000 to 00005
+B[INFO ] [Test worker] AlgorythmZipCodeTest -       null to 00009
