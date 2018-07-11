@@ -6,6 +6,14 @@ To build the solution and run the unit tests, from the root directory.
 
     ./gradlew clean build
 
+If that throws an error
+
+    ./gradlew: line 2: $'\r': command not found
+
+Run this command first and rerun the build command.
+
+    sed -i 's/\r$//' gradlew
+
 Logging level is currently set to info, and to display results to the console. On windows I encountered an issue with the gradle build, or my configuration, in which the api/build/libs directory could not be deleted on some runs. Please re-run the build a second time and the issue clears itself. It may be a timing issue with the build tasks--maybe a lock file left in place at the wrong time.
 
 I kept the number of comments inside the code small. I think too many comments take away from readability, and also get out of sync with the actual code as it is maintened over time. It is better if the code itself is written in an understandable fashion--not that I achieved that here.
