@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 import org.apache.commons.lang3.math.NumberUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 import com.williamsonoma.api.model.address.ZipCodeRange;
@@ -19,11 +21,20 @@ import com.williamsonoma.api.utility.address.ZipCode;
  * Author: Kris Jornlin
  * Date: 7/7/2018
  */
+@Service
 public class AlgorythmZipCode implements ZipCode
 {
     private enum BoundType { Lower, Upper };
+
+    private Boolean processZipCodesInParallel;
+
     private static final String zipRx = "[0-9]{5}";
     private static final Logger logger = LogManager.getLogger(AlgorythmZipCode.class);
+
+    public AlgorythmZipCode(Boolean processZipCodesInParallel)
+    {
+        this.processZipCodesInParallel = processZipCodesInParallel;
+    }
 
     public Collection<ZipCodeRange> compactRanges(Collection<ZipCodeRange> ranges) throws IllegalArgumentException
     {
@@ -52,7 +63,14 @@ public class AlgorythmZipCode implements ZipCode
                 };
             }));
 
-        ranges.parallelStream().forEach(x -> addBounds(x, rangeBounds));
+        if (processZipCodesInParallel)
+        {
+            ranges.parallelStream().forEach(x -> addBounds(x, rangeBounds));
+        }
+        else
+        {
+            ranges.forEach(x -> addBounds(x, rangeBounds));
+        }
 
         return extractRanges(rangeBounds);
     }
