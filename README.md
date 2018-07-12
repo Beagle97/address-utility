@@ -1,6 +1,6 @@
 Thank you for the code challenge. It has been a fun activity.
 
-This project was built using Java 10.0.1 and Gradle 4.8.1. There are two projects, api and utilities. I placed the zip code range compacting service into a more general address utilities package because that is probably how I would organize it in a real world environment.
+This project was built using Java 10.0.1 and Gradle 4.8.1 on Cygwin under Windows. There are two projects, api and utilities. I placed the zip code range compacting service into a more general address utilities package because that is probably how I would organize it in a real world environment.
 
 To build the solution and run the unit tests, from the root directory.
 
